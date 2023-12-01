@@ -4,34 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
+    <style>
+    /*สิ่งที่อยู่ตรงนี้ จะมีไว้เเค่ให้ dev อ่าน*/
+    /*1.แต่งให้ใคร (id,class,DOM) 2.แต่งอะไร*/
+        @font-face {
+            font-family: 'Kanit';
+            src: url(./Kanit/Kanit-Regular.ttf);
+        }
+
+        body{
+            font-family:Tahoma;
+        }
+        #register{
+            font-size: 25px;
+            color: aqua;
+            font-weight: 800;
+            padding: 10px;/*รอบใน*/
+            margin: 10px;       
+            border: 1px cornflowerblue solid;/*เส้นขอบของbackground*/
+            background-color: lightcoral;
+        }
+
+        .header-form{
+            font-weight: 800;
+        }
+        .gender{
+            display: flex;
+        }
+        .container {
+            display: flex;
+        }
+        .item-left{
+            background-color:red;
+            flex: 1;
+        }
+        .item-right{
+            background-color:blue;
+            flex: 2;
+        }
+        .grid-container{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
+
 </head>
 <body>
-    <h1>Register</h1>
-   
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
-
-        <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname" required><br>
-
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required><br>
-
-        <div>
-            <p>Gender:</p>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-
-            <input type="radio" id="none" name="gender" value="none">
-            <label for="none">None</label>
-        </div>
-
-        <div>
-            <input type="submit" value="Send Information">
-        </div>
+    <!--ส่วนที่แสดงออกไปหน้าจอ Browser-->
+    <!--3. from-->
     
+    <div class="container">
+        <div class="item-left">Left</div>
+        <div class="item-right">Right</div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-container">item 1</div>
+        <div class="grid-container">item 2</div>
+        <div class="grid-container">item 3</div>
+        <div class="grid-container">item 4</div>
+    </div>
+
+    <div id="register">Register From</div>
+
+    <span class="header-form">ชื่อจริง</span>
+        <input class="form"type="text">
+    <span class="header-form">นามสกุล</span>
+        <input class="form" type="text"> <br>
+    อายุ
+        <input class="form"type="number" min="0" max="100">
+
+    <div class="gender">
+        เพศ
+        
+        <div class="gender">
+            <input name="gender"type="radio">ชาย
+        </div>
+        <div class="gender">
+            <input name="gender"type="radio">หญิง
+        </div>
+        <div class="gender">
+            <input name="gender"type="radio">ไม่ระบุ
+        </div>
+    </div>
+    <div>
+        <h2>สิ่งที่สนใจ</h2>
+        <div><input name="interest"type="checkbox">หนังสือ</div>
+        <div><input name="interest"type="checkbox">หนัง</div>
+        <div><input name="interest"type="checkbox">เรียน</div>
+    </div>
+
+    <div>
+    คำอธิบายตัวตนเพิ่มเติม
+        <div>
+            <textarea></textarea>
+        </div>
+        <button>ส่งข้อมูล</button>
+    </div>
 </body>
 </html>
+
+
+
+
+
+
+
