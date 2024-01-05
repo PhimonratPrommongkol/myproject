@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container .item {
+            background-color: blue;
+
+        }
+        .foot-container .item {
+            background-color: red;
+        }
+        .main-container > .item {
+            background-color: green;
+            padding :10px;
+        }
+        .button{
+            padding: 10px;
+            border: 0;
+            background-color: yellow;
+
+        }
+        .button.ective {
+            background-color: blueviolet;
+        }
+        .button.denger{
+            background-color: red;
+        }
+        .item1+.item2 {
+            background-color: blue;
+        }
+        input[type ="text"] {
+            background-color: red;
+        }
+
+    
+    </style>
+   
+</head>
+
+<body>
+    <!--1. item เป็นลูก ของ container -->
+    <div class="container">
+        container
+        <div class="item">
+            item 1
+        </div>
+    </div>
+    
+    <div class="foot-container">
+        container
+        <div class="item">
+            item 1
+        </div>
+    </div>
+<!--2. item เป็นลูก ของ containerแค่ชั้นเดียว -->
+
+    <div class="main-container">
+        container
+        <div class="item">
+           item 
+           <div class="item">
+                item 1
+            </div>
+           <div class="item">
+                item 2
+            </div>
+            <div class="item">
+                item 3
+            </div>
+        </div>
+    </div>
+<!--3. มี class ติดกัน -->
+    <button class="button">ปุ่ม</button>
+    <button class="button ective">ปุ่ม</button>
+    <button class="button denger">ปุ่ม</button>
+<!--4. เพื่อนกัน adjacent -->
+<div class="item1">item1</div>
+<div class="item2">item2</div>
+<!--5. attribute selectro -->
+<input type="text" name="firstname">
+<input type="text" name="lastname">
+<input type="text" name="email">
+</body>
+</html>
